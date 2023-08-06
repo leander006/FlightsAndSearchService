@@ -1,15 +1,20 @@
-<ul><h1>-src/</h1>
-      <li>index.js/</li>
-      <li>models/</li>
-      <li>controllers/</li>
-      <li>middlewares/</li>
-      <li>services/</li>
-      <li>utils/</li>
-      <li>config/</li>
-      <li>repository/</li>
-</ul>
-<ul>
-      <li><h1>-test/</h1></li>
-      <li><h1>-static/</h1></li>
-      <li><h1>-temp/</h1></li>
-</ul>
+# Welcome to Flights Service
+
+## Project Setup
+
+      - Clone the project
+      - Execite `npm install` on the same path as of your root directory of the downloaded project
+      - Create a `.env` file inside your root directory and add following environment variable
+            - `PORT:3000`
+      - Inside the `src/config` create file with `config.json` and add following code to it in form of json
+```
+{
+  "development": {
+    "username": <YOUR_ADMIN_NAME>,
+    "password": <YOUR_ADMIN_PASSWORD>,
+    "database": "Flights_Search_DB_Dev",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+}
+```
