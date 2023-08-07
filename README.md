@@ -27,9 +27,10 @@ to it in form of json
   terminal and execute `npx sequelize db:create`
 - And then execute `npx sequelize db:migrate`
 
-```
 
-## DB Design
+
+## Db Design
+```
   - Airplane Table
   - Flight Table
   - Airport Table
