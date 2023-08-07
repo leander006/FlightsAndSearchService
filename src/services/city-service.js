@@ -1,4 +1,4 @@
-const { CityRepository } = require("../models/index");
+const { CityRepository } = require("../repository/index");
 
 class CityService {
   constructor() {
@@ -41,3 +41,5 @@ class CityService {
     }
   }
 }
+
+module.exports = CityService;
