@@ -7,7 +7,8 @@
       downloaded project
       - Create a`.env`file inside your root directory and add following environment 
       variable
-            -`PORT:3000`      - Inside the`src/config`create file with`config.json` and add following code
+            -`PORT:3000`      
+      - Inside the`src/config`create file with`config.json` and add following code
 to it in form of json
 
 ```
@@ -23,7 +24,8 @@ to it in form of json
 ```
 
 - Once you've added your db config as listed above , go to the src folder from your
-  terminal and execute `npm sequelize db:create`
+  terminal and execute `npx sequelize db:create`
+- And then execute `npx sequelize db:migrate`
 
 ```
 
