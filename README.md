@@ -3,11 +3,11 @@
 ## Project Setup
 
     - Clone the project
-      - Execite`npm install`on the same path as of your root directory of the 
+      - Execite`npm install`on the same path as of your root directory of the
       downloaded project
-      - Create a`.env`file inside your root directory and add following environment 
+      - Create a`.env`file inside your root directory and add following environment
       variable
-            -`PORT:3000`      
+            -`PORT:3000`
       - Inside the`src/config`create file with`config.json` and add following code
       to it in form of json
 
@@ -28,6 +28,7 @@
 - And then execute `npx sequelize db:migrate`
 
 ## DB Design
+
 ```
   - Airplane Table
   - Flight Table
@@ -38,3 +39,13 @@
   - A city has many airports but one airport belongs to a city
   - One airport can have many flights, but a flight belongs to one airport
 ```
+
+## Tables
+
+### City -> id,name,updated_At,created_At
+
+### Airport -> id,name ,address,city_id,created_At,updated_At,
+
+     Relationship -> City has many airports and Airport belongs to a city (one to
+     many)
+     npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
