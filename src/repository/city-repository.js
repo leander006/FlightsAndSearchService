@@ -10,6 +10,16 @@ class CityRepository {
     }
   }
 
+  async AddAllCities(cities) {
+    console.log(cities);
+    try {
+      const city = await City.bulkCreate(cities);
+      return city;
+    } catch (error) {
+      throw { error };
+    }
+  }
+
   async deleteCity(cityId) {
     try {
       await City.destroy({
@@ -31,6 +41,17 @@ class CityRepository {
         },
       });
       return city;
+    } catch (error) {
+      throw { error };
+    }
+  }
+
+  async getAirport(cityId) {
+    try {
+      console.log("cityId ", cityId);
+      const city = await City.findByPk(cityId);
+      const airports = await city.getAirports();
+      return airports;
     } catch (error) {
       throw { error };
     }

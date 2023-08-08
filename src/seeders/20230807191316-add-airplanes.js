@@ -3,46 +3,46 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert("Airports", [
+    await queryInterface.bulkInsert("Airplanes", [
       {
-        name: "Chhatrapati Shivaji Maharaj International Airport",
-        cityId: "1",
+        modelNumber: "Enola Gay",
+        capacity: 230,
         updatedAt: new Date(),
         createdAt: new Date(),
       },
       {
-        name: "Kempegowda International Airport Bengaluru",
-        cityId: "4",
+        modelNumber: "Memphis Belle",
+        capacity: 170,
         updatedAt: new Date(),
         createdAt: new Date(),
       },
       {
-        name: "DB patil international airport",
-        cityId: "1",
+        modelNumber: "Spirit of St. Louis",
+        capacity: 260,
         updatedAt: new Date(),
         createdAt: new Date(),
       },
       {
-        name: "Hindustan Aeronautics Limited Airport",
-        cityId: "4",
+        modelNumber: "Old 666",
+        capacity: 240,
         updatedAt: new Date(),
         createdAt: new Date(),
       },
       {
-        name: "Manohar International Airport",
-        cityId: "8",
+        modelNumber: "City of Canberra",
+        capacity: 300,
         updatedAt: new Date(),
         createdAt: new Date(),
       },
       {
-        name: "Mysuru Airport",
-        cityId: "12",
+        modelNumber: "The Galloping Ghost",
+        capacity: 190,
         updatedAt: new Date(),
         createdAt: new Date(),
       },
       {
-        name: "Sri Guru Ram Dass Jee International Airport",
-        cityId: "11",
+        modelNumber: "Cape Cod",
+        capacity: 210,
         updatedAt: new Date(),
         createdAt: new Date(),
       },

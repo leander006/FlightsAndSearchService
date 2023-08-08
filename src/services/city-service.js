@@ -14,6 +14,16 @@ class CityService {
     }
   }
 
+  async AddAllCity(data) {
+    console.log(data);
+    try {
+      const result = await this.CityRepository.AddAllCities(data);
+      return result;
+    } catch (error) {
+      throw { error };
+    }
+  }
+
   async deleteCity(cityId) {
     try {
       const result = await this.CityRepository.deleteCity(cityId);
@@ -35,6 +45,15 @@ class CityService {
   async getCity(cityId) {
     try {
       const result = await this.CityRepository.getCity(cityId);
+      return result;
+    } catch (error) {
+      throw { error };
+    }
+  }
+
+  async getAirports(cityId) {
+    try {
+      const result = await this.CityRepository.getAirport(cityId);
       return result;
     } catch (error) {
       throw { error };
