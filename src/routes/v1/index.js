@@ -2,7 +2,7 @@ const experss = require("express");
 
 const CityController = require("../../controllers/city-controller");
 const FlightController = require("../../controllers/flight-controller");
-
+const AiroprtController = require("../../controllers/airport-controller");
 const router = experss.Router();
 
 router.post("/city", CityController.create);
@@ -17,4 +17,5 @@ router.post("/flights", FlightController.create);
 router.get("/flights/:id", FlightController.getFlight);
 router.get("/flights", FlightController.getAll);
 
+router.post("/airports", AiroprtController.create);
 module.exports = router;
