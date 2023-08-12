@@ -31,6 +31,27 @@ const create = async (req, res) => {
   }
 };
 
+const update = async (req, res) => {
+  try {
+    console.log(req.body);
+    const flight = await flightService.updateFlight(req.body, req.params.id);
+    return res.status(successCodes.OK).json({
+      data: flight,
+      success: true,
+      message: "Successfully updated a flight",
+      err: {},
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      data: {},
+      success: false,
+      message: "Not able to update a flight ",
+      err: error,
+    });
+  }
+};
+
 const getFlight = async (req, res) => {
   try {
     const flight = await flightService.getFlights(req.params.id);
@@ -75,4 +96,5 @@ module.exports = {
   create,
   getFlight,
   getAll,
+  update,
 };

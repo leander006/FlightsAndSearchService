@@ -20,6 +20,7 @@ router.post(
   FlightMiddlewares.ValidateCreateFlight,
   FlightController.create
 );
+router.patch("/flights/:id", FlightController.update);
 router.get("/flights/:id", FlightController.getFlight);
 router.get("/flights", FlightController.getAll);
 

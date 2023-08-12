@@ -29,6 +29,19 @@ class FlightRepository {
     }
   }
 
+  async updateFlight(data, flightId) {
+    try {
+      // console.log(data);
+      await Flights.update(data, {
+        where: {
+          id: flightId,
+        },
+      });
+      return true;
+    } catch (error) {
+      throw { error };
+    }
+  }
   async getFlights(id) {
     try {
       const flights = await Flights.findByPk(id);
